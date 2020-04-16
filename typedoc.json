@@ -1,0 +1,5 @@
+{
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "out": "docs"
+}
