@@ -1,0 +1,14 @@
+{
+  "name": "@deepconcern/stack",
+  "version": "1.0.0",
+  "description": "A simple stack data structure.",
+  "main": "dist/index.js",
+  "author": "Wyatt Barnes",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  }
+}
