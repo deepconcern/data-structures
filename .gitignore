@@ -1,6 +1,5 @@
 .DS_Store
 dist/
-docs/
 node_modules/
 
 !packages/**/dist/

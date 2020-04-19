@@ -1,6 +1,8 @@
 {
+    "exclude": "**/index*",
     "excludeNotExported": true,
     "excludePrivate": true,
-    "out": "docs",
-    "plugin": "typedoc-plugin-markdown"
+    "name": "Data Structures",
+    "mode": "file",
+    "out": "docs"
 }
