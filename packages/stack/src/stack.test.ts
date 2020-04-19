@@ -8,7 +8,7 @@ describe('Stack.peek', () => {
 
     it('should return nothing if the stack is empty', () => {
         const stack = new Stack<number>();
-        expect(stack.peek()).toBeUndefined();
+        expect(stack.peek()).toBeNull();
     });
 });
 
@@ -20,7 +20,7 @@ describe('Stack.pop', () => {
 
     it('should return nothing if the stack is empty', () => {
         const stack = new Stack<number>();
-        expect(stack.pop()).toBeUndefined();
+        expect(stack.pop()).toBeNull();
     });
 });
 

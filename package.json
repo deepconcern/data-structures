@@ -6,11 +6,12 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
+    "build": "bolt ws build",
     "create-package": "node dist/scripts/create-package.js",
     "generate-documentation": "typedoc src",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "precreate-package": "tsc -p tsconfig.scripts.json",
-    "test": "jest"
+    "test": "bolt ws test"
   },
   "private": true,
   "bolt": {

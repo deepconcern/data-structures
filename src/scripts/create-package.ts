@@ -8,7 +8,14 @@ import { resolve } from 'path';
 const createPackage = (): void => {
     const BASE_TSCONFIG = 'tsconfig.json';
     const BUILD_TSCONFIG = 'tsconfig.build.json';
-    const packagesPath = resolve(__dirname, '..', '..', 'packages');
+    const JEST_CONFIG = 'jest.config.js';
+
+    const CONFIGS_PATH = resolve(__dirname, '..', '..', 'configs');
+    const PACKAGES_PATH = resolve(__dirname, '..', '..', 'packages');
+
+    const BASE_TSCONFIG_PATH = resolve(CONFIGS_PATH, BASE_TSCONFIG);
+    const BUILD_TSCONFIG_PATH = resolve(CONFIGS_PATH, BUILD_TSCONFIG);
+    const JEST_CONFIG_PATH = resolve(CONFIGS_PATH, JEST_CONFIG);
 
     // Check that we have the proper arguments
     if (process.argv.length < 3) {
@@ -16,7 +23,7 @@ const createPackage = (): void => {
     }
     
     const packageName = process.argv[2];
-    const packagePath = resolve(packagesPath, packageName);
+    const packagePath = resolve(PACKAGES_PATH, packageName);
     
     // Create package
     {
@@ -72,17 +79,22 @@ const createPackage = (): void => {
     
     // Create TypeScript configurations
     {
-        const configsPath = resolve(__dirname, '..', '..', 'configs');
-        const targetTsconfigPath = resolve(configsPath, BASE_TSCONFIG);
-        const targetTsconfigBuildPath = resolve(configsPath, BUILD_TSCONFIG);
         const symlinkTsconfigPath = resolve(packagePath, BASE_TSCONFIG);
         const symlinkTsconfigBuildPath = resolve(packagePath, BUILD_TSCONFIG);
         
-        symlinkSync(targetTsconfigPath, symlinkTsconfigPath);
-        console.log(symlinkTsconfigPath, '->', targetTsconfigPath);
+        symlinkSync(BASE_TSCONFIG_PATH, symlinkTsconfigPath);
+        console.log(symlinkTsconfigPath, '->', BASE_TSCONFIG_PATH);
 
-        symlinkSync(targetTsconfigBuildPath, symlinkTsconfigBuildPath);
-        console.log(symlinkTsconfigBuildPath, '->', targetTsconfigBuildPath);
+        symlinkSync(BUILD_TSCONFIG_PATH, symlinkTsconfigBuildPath);
+        console.log(symlinkTsconfigBuildPath, '->', BUILD_TSCONFIG_PATH);
+    }
+
+    // Create Jest configuration
+    {
+        const symlinkJestConfigPath = resolve(packagePath, JEST_CONFIG);
+        
+        symlinkSync(JEST_CONFIG_PATH, symlinkJestConfigPath);
+        console.log(symlinkJestConfigPath, '->', JEST_CONFIG_PATH);
     }
     
     // Create src/index.ts
