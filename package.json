@@ -7,7 +7,7 @@
   "scripts": {
     "build": "bolt ws build",
     "create-package": "node dist/scripts/create-package.js",
-    "generate-documentation": "typedoc",
+    "generate-documentation": "node dist/scripts/generate-documentation.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pregenerate-documentation": "tsc -p tsconfig.scripts.json",
     "precreate-package": "tsc -p tsconfig.scripts.json",
@@ -20,6 +20,7 @@
     ]
   },
   "devDependencies": {
+    "@strictsoftware/typedoc-plugin-monorepo": "^0.3.1",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.0",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
@@ -30,6 +31,6 @@
     "jest": "^25.3.0",
     "ts-jest": "^25.3.1",
     "typedoc": "^0.17.4",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8"
   }
 }

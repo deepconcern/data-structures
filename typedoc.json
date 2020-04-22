@@ -1,8 +1,18 @@
 {
-    "exclude": "**/index*",
+    "exclude": [
+        "*.test.ts",
+        "src/**/*"
+    ],
+    "excludeExternals": true,
     "excludeNotExported": true,
     "excludePrivate": true,
+    "excludeProtected": true,
+    "external-modulemap": "packages\/([a-z-]+)\/.*",
+    "ignoreCompilerErrors": "false",
+    "mode": "modules",
     "name": "Data Structures",
-    "mode": "file",
-    "out": "docs"
+    "out": "docs",
+    "preserveConstEnums": "true",
+    "stripInternal": "true",
+    "theme": "default"
 }

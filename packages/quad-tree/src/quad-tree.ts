@@ -10,7 +10,7 @@ const isVectorInBounds = (
     return x >= boundaryX && x <= boundaryX + boundaryWidth && y >= boundaryY && y <= boundaryY + boundaryHeight;
 };
 
-export abstract class Quad {
+abstract class Quad {
     #height: number;
     #width: number;
     #x: number;
@@ -153,6 +153,9 @@ class NestedQuad extends Quad {
     }
 }
 
+/**
+ * A quad tree.
+ */
 export class QuadTree {
     #height: number;
     #width: number;
