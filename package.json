@@ -7,7 +7,7 @@
   "scripts": {
     "build": "bolt ws build",
     "create-package": "node dist/scripts/create-package.js",
-    "generate-documentation": "node dist/scripts/generate-documentation.js",
+    "generate-documentation": "typedoc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pregenerate-documentation": "tsc -p tsconfig.scripts.json",
     "precreate-package": "tsc -p tsconfig.scripts.json",

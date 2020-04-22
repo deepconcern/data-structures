@@ -7,9 +7,12 @@
     "excludeNotExported": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "external-modulemap": "packages\/([a-z-]+)\/.*",
+    "external-modulemap": "packages\/([a-z-]+)\/src\/index.ts",
     "ignoreCompilerErrors": "false",
-    "mode": "modules",
+    "inputFiles": [
+        "packages/*/src/index.ts"
+    ],
+    "mode": "file",
     "name": "Data Structures",
     "out": "docs",
     "preserveConstEnums": "true",

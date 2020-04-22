@@ -52,10 +52,7 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/stack.html">stack</a>
-				</li>
-				<li>
-					<a href="stack.stack-2.html">Stack</a>
+					<a href="stack.html">Stack</a>
 				</li>
 			</ul>
 			<h1>Class Stack&lt;TValue&gt;</h1>
@@ -68,8 +65,13 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A data structure that is first-in-last-out (FILO).</p>
+						<p>A simple data structure that is first-in-last-out (FILO).</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">https://en.wikipedia.org/wiki/Stack_(abstract_data_type)</a></p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-type-parameters">
@@ -77,6 +79,11 @@
 				<ul class="tsd-type-parameters">
 					<li>
 						<h4>TValue</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The type of data the stack holds</p>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</section>
@@ -95,24 +102,24 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="stack.stack-2.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="stack.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="stack.stack-2.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="stack.html#size" class="tsd-kind-icon">size</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.stack-2.html#peek" class="tsd-kind-icon">peek</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.stack-2.html#pop" class="tsd-kind-icon">pop</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.stack-2.html#push" class="tsd-kind-icon">push</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.stack-2.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.stack-2.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="stack.stack-2.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.html#peek" class="tsd-kind-icon">peek</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.html#pop" class="tsd-kind-icon">pop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.html#push" class="tsd-kind-icon">push</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="stack.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="stack.html#create" class="tsd-kind-icon">create</a></li>
 							</ul>
 						</section>
 					</div>
@@ -124,19 +131,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stack.stack-2.html" class="tsd-signature-type">Stack</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stack.html" class="tsd-signature-type">Stack</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L30">stack/src/stack.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L46">stack/src/stack.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a stack. Items passed in will be pushed onto the stack.</p>
+									<p>Creates a stack.</p>
 								</div>
+								<p>If <code>items</code> is not null, it will push items onto the stack:</p>
+								<pre><code><span class="hljs-keyword">const</span> stack1 = new Stack&lt;number&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+<span class="hljs-keyword">const</span> stack2 = new Stack&lt;number&gt;().push(<span class="hljs-number">1</span>).push(<span class="hljs-number">2</span>).push(<span class="hljs-number">3</span>);</code></pre><p>Both stacks will be equal.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -149,7 +159,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="stack.stack-2.html" class="tsd-signature-type">Stack</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="stack.html" class="tsd-signature-type">Stack</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,7 +176,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L46">stack/src/stack.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L71">stack/src/stack.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,13 +201,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L106">stack/src/stack.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L87">stack/src/stack.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets the value off the top of the stack, but doesn&#39;t remove it.</p>
+									<p>Returns a value off the top of the stack without modifying the stack.</p>
 								</div>
+								<pre><code><span class="hljs-keyword">const</span> <span class="hljs-built_in">stack</span> = <span class="hljs-keyword">new</span> Stack(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+
+console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">stack</span>.<span class="hljs-built_in">peek</span>()); <span class="hljs-comment">// 3</span>
+console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">stack</span>.<span class="hljs-built_in">size</span>); <span class="hljs-comment">// 3</span></code></pre>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 							<p>The value off the top of the stack</p>
@@ -214,13 +228,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L83">stack/src/stack.ts:83</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L108">stack/src/stack.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Pops a value off the top of the stack, and then removes it.</p>
 								</div>
+								<pre><code><span class="hljs-keyword">const</span> <span class="hljs-built_in">stack</span> = <span class="hljs-keyword">new</span> Stack(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+
+console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">stack</span>.pop()); <span class="hljs-comment">// 3</span>
+console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">stack</span>.<span class="hljs-built_in">size</span>); <span class="hljs-comment">// 2</span></code></pre>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 							<p>The value off the top of the stack</p>
@@ -237,13 +255,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L56">stack/src/stack.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L140">stack/src/stack.ts:140</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Pushes a value on to the top of the stack.</p>
 								</div>
+								<p>Since <code>push</code> returns <code>this</code>, multiple <code>push</code> commands can be chained:</p>
+								<pre><code>const stack = <span class="hljs-keyword">new</span> Stack&lt;number&gt;();
+
+stack.push(<span class="hljs-number">1</span>).<span class="hljs-keyword">push</span>(<span class="hljs-number">2</span>).<span class="hljs-keyword">push</span>(<span class="hljs-number">3</span>);</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -269,7 +291,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L120">stack/src/stack.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L167">stack/src/stack.ts:167</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -292,7 +314,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L138">stack/src/stack.ts:138</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L186">stack/src/stack.ts:186</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -309,24 +331,30 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create&lt;TValue&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stack.stack-2.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create&lt;TValue&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/e03fd83/packages/stack/src/stack.ts#L28">stack/src/stack.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/deepconcern/data-structures/blob/5e8ce17/packages/stack/src/stack.ts#L44">stack/src/stack.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a stack. Items passed in will be pushed onto the stack.</p>
+									<p>Creates a stack.</p>
 								</div>
+								<p>If <code>items</code> is not null, it will push items onto the stack:</p>
+								<pre><code>const stack1 = Stack&lt;number&gt;.<span class="hljs-keyword">create</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+const stack2 = Stack&lt;number&gt;.<span class="hljs-keyword">create</span>().<span class="hljs-keyword">push</span>(<span class="hljs-number">1</span>).<span class="hljs-keyword">push</span>(<span class="hljs-number">2</span>).<span class="hljs-keyword">push</span>(<span class="hljs-number">3</span>);</code></pre><p>Both stacks will be equal.</p>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
 									<h4>TValue</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of data the stack holds</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -338,7 +366,8 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="stack.stack-2.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A new stack</p>
 						</li>
 					</ul>
 				</section>
@@ -350,69 +379,70 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/binary_tree.html">binary-<wbr>tree</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/quad_tree.html">quad-<wbr>tree</a>
-					</li>
-					<li class="current tsd-kind-module">
-						<a href="../modules/stack.html">stack</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-module">
-						<a href="../modules/binary_tree.html" class="tsd-kind-icon">binary-<wbr>tree</a>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="binarytree.html" class="tsd-kind-icon">Binary<wbr>Tree</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/quad_tree.html" class="tsd-kind-icon">quad-<wbr>tree</a>
+					<li class=" tsd-kind-class">
+						<a href="nestedquad.html" class="tsd-kind-icon">Nested<wbr>Quad</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="quad.html" class="tsd-kind-icon">Quad</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="quadtree.html" class="tsd-kind-icon">Quad<wbr>Tree</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="singlepointquad.html" class="tsd-kind-icon">Single<wbr>Point<wbr>Quad</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-module">
-						<a href="../modules/stack.html" class="tsd-kind-icon">stack</a>
+					<li class="current tsd-kind-class tsd-has-type-parameter">
+						<a href="stack.html" class="tsd-kind-icon">Stack</a>
 						<ul>
-							<li class=" tsd-kind-reference tsd-parent-kind-module">
-								<a href="../modules/stack.html#stack-1" class="tsd-kind-icon">Stack</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="stack.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-								<a href="stack.stack-2.html" class="tsd-kind-icon">Stack</a>
-								<ul>
-									<li class=" tsd-kind-constructor tsd-parent-kind-class">
-										<a href="stack.stack-2.html#constructor" class="tsd-kind-icon">constructor</a>
-									</li>
-									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-										<a href="stack.stack-2.html#size" class="tsd-kind-icon">size</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class">
-										<a href="stack.stack-2.html#peek" class="tsd-kind-icon">peek</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class">
-										<a href="stack.stack-2.html#pop" class="tsd-kind-icon">pop</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class">
-										<a href="stack.stack-2.html#push" class="tsd-kind-icon">push</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class">
-										<a href="stack.stack-2.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class">
-										<a href="stack.stack-2.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
-									</li>
-									<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-										<a href="stack.stack-2.html#create" class="tsd-kind-icon">create</a>
-									</li>
-								</ul>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="stack.html#size" class="tsd-kind-icon">size</a>
 							</li>
-							<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-								<a href="../modules/stack.html#stacknode" class="tsd-kind-icon">Stack<wbr>Node</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stack.html#peek" class="tsd-kind-icon">peek</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stack.html#pop" class="tsd-kind-icon">pop</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stack.html#push" class="tsd-kind-icon">push</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stack.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="stack.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
+								<a href="stack.html#create" class="tsd-kind-icon">create</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#binarytreenode" class="tsd-kind-icon">Binary<wbr>Tree<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#scoringfunction" class="tsd-kind-icon">Scoring<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#vector" class="tsd-kind-icon">Vector</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#isvectorinbounds" class="tsd-kind-icon">is<wbr>Vector<wbr>InBounds</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -423,13 +453,11 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 			</ul>
 		</div>
 	</div>
