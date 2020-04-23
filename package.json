@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pregenerate-documentation": "tsc -p tsconfig.scripts.json",
     "precreate-package": "tsc -p tsconfig.scripts.json",
-    "test": "bolt ws test"
+    "test": "bolt jest --verbose"
   },
   "private": true,
   "bolt": {
