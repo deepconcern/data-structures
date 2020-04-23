@@ -16,10 +16,13 @@ export type StackNode<TValue> = {
 };
 
 /**
- * A simple data structure that is first-in-last-out (FILO).
+ * A last-in-first-out (LIFO) data structure.
  * 
- * @see https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
- * @typeParam TValue The type of data the stack holds
+ * @remarks
+ * For more information about stacks:
+ * {@link https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}.
+ * 
+ * @typeParam TValue - The type of data the stack holds
  */
 export class Stack<TValue> {
     #head?: StackNode<TValue>;
@@ -37,9 +40,9 @@ export class Stack<TValue> {
      * 
      * Both stacks will be equal.
      * 
-     * @param items The items to push onto the stack
+     * @param items - The items to push onto the stack
      * @returns A new stack
-     * @typeParam TValue The type of data the stack holds
+     * @typeParam TValue - The type of data the stack holds
      */
     static create<TValue>(...items: TValue[]): Stack<TValue> {
         return new Stack(...items);
@@ -57,7 +60,7 @@ export class Stack<TValue> {
      * 
      * Both stacks will be equal.
      * 
-     * @param items The items to push onto the stack
+     * @param items - The items to push onto the stack
      */
     constructor(...items: TValue[]) {
         items.forEach(item => {
@@ -134,7 +137,7 @@ export class Stack<TValue> {
      * stack.push(1).push(2).push(3);
      * ```
      * 
-     * @param value The value to push on to the top of the stack
+     * @param value - The value to push on to the top of the stack
      * @returns This stack
      */
     push(value: TValue): this {

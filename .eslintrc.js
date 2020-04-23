@@ -2,7 +2,8 @@ module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
     plugins: [
-      '@typescript-eslint',
+        'eslint-plugin-tsdoc',
+        '@typescript-eslint',
     ],
     extends: [
       'eslint:recommended',
@@ -60,6 +61,10 @@ module.exports = {
             "functions": "never"
         }],
         'quotes': ['error', 'single'],
+        'tsdoc/syntax': 'error',
+        '@typescript-eslint/array-type': ['error', 'array'],
+        '@typescript-eslint/ban-ts-comment': 'error',
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'], 
         '@typescript-eslint/member-delimiter-style': ['error', {
             "multiline": {
                 "delimiter": "comma",
