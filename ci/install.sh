@@ -2,6 +2,6 @@
 
 set -eux
 
-npm install bolt
+npm install -g bolt
 
 bolt
