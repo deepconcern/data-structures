@@ -14,7 +14,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - name: Install bolt
-      run: npm install bolt
+      run: npm install -g bolt
     - name: Install dependencies
       run: bolt
     - name: Run tests
