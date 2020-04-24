@@ -5,22 +5,18 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
-    "build": "bolt ws build",
     "create-package": "node dist/scripts/create-package.js",
     "generate-documentation": "typedoc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pregenerate-documentation": "tsc -p tsconfig.scripts.json",
     "precreate-package": "tsc -p tsconfig.scripts.json",
-    "test": "jest --config jest.config.js"
+    "test": "jest"
   },
   "private": true,
-  "bolt": {
-    "workspaces": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@strictsoftware/typedoc-plugin-monorepo": "^0.3.1",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.0",
     "@typescript-eslint/eslint-plugin": "^2.28.0",

@@ -7,8 +7,7 @@
     "excludeNotExported": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "external-modulemap": "packages\/([a-z-]+)\/src\/index.ts",
-    "ignoreCompilerErrors": "false",
+    "ignoreCompilerErrors": false,
     "inputFiles": [
         "packages/*/src/index.ts"
     ],
