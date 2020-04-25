@@ -5,11 +5,9 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
-    "create-package": "node dist/scripts/create-package.js",
+    "create-package": "node scripts/tooling/create-package.js",
     "generate-documentation": "typedoc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "pregenerate-documentation": "tsc -p tsconfig.scripts.json",
-    "precreate-package": "tsc -p tsconfig.scripts.json",
     "test": "jest"
   },
   "private": true,

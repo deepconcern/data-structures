@@ -1,11 +1,13 @@
-import { execSync } from 'child_process';
+#!/usr/bin/env node
+
+const child_process = require('child_process');
 import { appendFileSync, mkdirSync, readFileSync, symlinkSync } from 'fs';
 import { resolve } from 'path';
 
 /**
  * Creates a package in the "packages" workspace directory.
  */
-const createPackage = (): void => {
+const createPackage = () => {
     const BASE_TSCONFIG = 'tsconfig.json';
     const BUILD_TSCONFIG = 'tsconfig.build.json';
     const JEST_CONFIG = 'jest.config.js';
@@ -55,7 +57,7 @@ const createPackage = (): void => {
             }
     
             return accu;
-        }, {} as { [dependency: string]: string });
+        }, {});
     
         const packageJsonPath = resolve(packagePath, 'package.json');
         
@@ -112,7 +114,7 @@ const createPackage = (): void => {
 
     // Run bolt on new package
     {
-        execSync('bolt', {
+        child_process.execSync('yarn', {
             cwd: packagePath,
         });
     }
