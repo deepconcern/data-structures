@@ -13,7 +13,7 @@ Refer to each packackages README for usage.
 Run the following commands to test this repo:
 
 ```sh
-bolt
-bolt build
-bolt test
+yarn
+yarn build
+yarn test
 ```

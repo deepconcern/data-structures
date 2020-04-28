@@ -2,4 +2,4 @@
 
 set -eux
 
-bolt test
+yarn test

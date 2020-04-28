@@ -13,9 +13,9 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - name: Install bolt
-      run: npm install -g bolt
+    - name: Install yarn
+      run: npm install -g yarn
     - name: Install dependencies
-      run: bolt
+      run: yarn
     - name: Run tests
-      run: bolt test
+      run: yarn test

@@ -2,6 +2,6 @@
 
 set -eux
 
-npm install -g bolt
+npm install -g yarn
 
-bolt
+yarn
