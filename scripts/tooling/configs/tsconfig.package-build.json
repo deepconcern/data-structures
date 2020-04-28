@@ -4,5 +4,5 @@
         "noEmit": false,
         "outDir": "dist"
     },
-    "extends": "./tsconfig.package.json"
+    "extends": "./tsconfig.json"
 }

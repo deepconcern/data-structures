@@ -1,1 +1,1 @@
-/Users/wyattbarnes/workspace/data-structures/configs/jest.config.js
+/Users/wyattbarnes/workspace/data-structures/scripts/tooling/configs/jest.package-config.js

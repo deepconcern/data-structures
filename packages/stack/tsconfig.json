@@ -1,8 +1,1 @@
-{
-    "compilerOptions": {
-        "rootDir": "src"
-    },
-    "extends": "../../tsconfig.json",
-    "outDir": "dist",
-    "rootDir": "src",
-}
+/Users/wyattbarnes/workspace/data-structures/scripts/tooling/configs/tsconfig.package.json

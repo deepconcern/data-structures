@@ -5,6 +5,7 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
+    "build": "yarn workspaces run build",
     "create-package": "node scripts/tooling/create-package.js",
     "generate-documentation": "typedoc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
