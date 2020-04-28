@@ -1,5 +1,7 @@
 # Data Structures
 
+![CI](https://github.com/deepconcern/data-structures/workflows/CI/badge.svg)
+
 [Documentation](https://deepconcern.github.io/data-structures/)
 
 A collection of data structures written in TypeScript.
