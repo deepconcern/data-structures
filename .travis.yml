@@ -1,3 +1,3 @@
 language: node_js
-install: .scripts/ci/install.sh
-script: .scripts/ci/script.sh
+install: ./scripts/ci/install.sh
+script: ./scripts/ci/script.sh
