@@ -2,17 +2,23 @@
 
 const child_process = require('child_process');
 const fs = require('fs');
-import { resolve } from 'path';
+const path = require('path');
 
 // Directories/files
 /** The name of the directory containing shared configuration files */
 const CONFIGS_DIR = 'configs';
-/**  */
+/** The name of the package's entry point */
 const INDEX = 'index.ts';
+/** The name of the package's Jest configuration file */
+const JEST_CONFIG_JSON = 'jest.config.js';
+/** The name of the symlink target for the package's Jest configuration file */
+const JEST_PACKAGE_CONFIG_JSON = 'jest.package-config.js';
 /** The name of the package's configuration file */
 const PACKAGE_JSON = 'package.json';
 /** The name of the directory containing the individual packages */
 const PACKAGES_DIR = 'packages';
+/** The name of the directory containing project scripts */
+const SCRIPTS_DIR = 'scripts';
 /** The package's source directory */
 const SOURCE_DIR = 'src';
 /** The name of the package's base TypeScript configuration file */
@@ -23,24 +29,14 @@ const TSCONFIG_BUILD_JSON = 'tsconfig.build.json';
 const TSCONFIG_PACKAGE_JSON = 'tsconfig.package.json';
 /** The name of the symlink target for the package's base TypeScript configuration file */
 const TSCONFIG_PACKAGE_BUILD_JSON = 'tsconfig.package-build.json';
-/** The name of the package's Jest configuration file */
-const JEST_CONFIG_JSON = 'jest.config.js';
-/** The name of the symlink target for the package's Jest configuration file */
-const JEST_PACKAGE_CONFIG_JSON = 'jest.package-config.js';
 
 // Paths
 /** The path to the shared configuration files (a.k.a. symlink targets) */
-const CONFIGS_PATH = resolve(__dirname, '.', CONFIGS_DIR);
-/** The path to the symlink target for the package's Jest configuration file */
-const JEST_PACKAGE_CONFIG_PATH = resolve(CONFIGS_PATH, JEST_PACKAGE_CONFIG_JSON);
+const CONFIGS_PATH = path.join(SCRIPTS_DIR, CONFIGS_DIR);
 /** The path to the directory containing each individual package */
-const PACKAGES_PATH = resolve(__dirname, '..', '..', PACKAGES_DIR);
+const PACKAGES_PATH = path.resolve(__dirname, '..', '..', PACKAGES_DIR);
 /** The path to the monorepo's configuration file */
-const ROOT_PACKAGE_JSON_PATH = resolve(__dirname, '..', '..', PACKAGE_JSON);
-/** The path to the symlink target for the package's TypeScript "base" configuration file */
-const TSCONFIG_PACKAGE_PATH = resolve(CONFIGS_PATH, TSCONFIG_PACKAGE_JSON);
-/** The path to the symlink target for the package's Typescript "build" configuration file */
-const TSCONFIG_PACKAGE_BUILD_PATH = resolve(CONFIGS_PATH, TSCONFIG_PACKAGE_BUILD_JSON);
+const ROOT_PACKAGE_JSON_PATH = path.resolve(__dirname, '..', '..', PACKAGE_JSON);
 
 // Other
 /** The list of dev dependencies to install into the new package */
@@ -68,13 +64,13 @@ const createPackage = () => {
     
     const packageName = process.argv[2];
     /** The path to the package's directory */
-    const packagePath = resolve(PACKAGES_PATH, packageName);
+    const packagePath = path.resolve(PACKAGES_PATH, packageName);
     /** The path to the package's Jest configuration file */
-    const jestConfigPath = resolve(packagePath, JEST_CONFIG_JSON);
+    const jestConfigPath = path.resolve(packagePath, JEST_CONFIG_JSON);
     /** The path to the package's TypeScript "build" configuration file */
     const tsconfigBuildPath = resolve (packagePath, TSCONFIG_BUILD_JSON);
     /** The path to the package's TypeScript "base" configuration file */
-    const tsconfigPath = resolve(packagePath, TSCONFIG_JSON);
+    const tsconfigPath = path.resolve(packagePath, TSCONFIG_JSON);
     
     // Create package
     {
@@ -107,7 +103,7 @@ const createPackage = () => {
             return accu;
         }, {});
     
-        const packageJsonPath = resolve(packagePath, PACKAGE_JSON);
+        const packageJsonPath = path.resolve(packagePath, PACKAGE_JSON);
         
         const packageJson = {
             name: `@deepconcern/${packageName}`,
@@ -129,27 +125,31 @@ const createPackage = () => {
     
     // Create TypeScript configurations
     {   
-        symlinkSync(TSCONFIG_PACKAGE_PATH, tsconfigPath);
-        console.log(tsconfigPath, '->', TSCONFIG_PACKAGE_PATH);
+        const symlinkTsconfigPackagePath = path.join('..', '..', CONFIGS_PATH, TSCONFIG_PACKAGE_JSON);
+        const symlinkTsconfigPackageBuildPath = path.join('..', '..', CONFIGS_PATH, TSCONFIG_PACKAGE_BUILD_JSON);
 
-        symlinkSync(TSCONFIG_PACKAGE_BUILD_PATH, tsconfigBuildPath);
-        console.log(tsconfigBuildPath, '->', TSCONFIG_PACKAGE_BUILD_PATH);
+        symlinkSync(symlinkTsconfigPackagePath, tsconfigPath);
+        console.log(tsconfigPath, '->', symlinkTsconfigPackagePath);
+
+        symlinkSync(symlinkTsconfigPackageBuildPath, tsconfigBuildPath);
+        console.log(tsconfigBuildPath, '->', symlinkTsconfigPackageBuildPath);
     }
 
     // Create Jest configuration
     {   
-        symlinkSync(JEST_PACKAGE_CONFIG_PATH, jestConfigPath);
-        console.log(jestConfigPath, '->', JEST_PACKAGE_CONFIG_PATH);
+        const symlinkJestPackageConfigPath = path.join('..', '..', CONFIGS_PATH, JEST_PACKAGE_CONFIG_JSON)
+        symlinkSync(symlinkJestPackageConfigPath, jestConfigPath);
+        console.log(jestConfigPath, '->', symlinkJestPackageConfigPath);
     }
     
     // Create src/index.ts
     {
-        const srcPath = resolve(packagePath, SOURCE_DIR);
+        const srcPath = path.resolve(packagePath, SOURCE_DIR);
 
         fs.mkdirSync(srcPath);
         console.log(srcPath);
 
-        const indexPath = resolve(srcPath, INDEX);
+        const indexPath = path.resolve(srcPath, INDEX);
 
         appendFileSync(indexPath, '');
         console.log(indexPath);
@@ -158,7 +158,7 @@ const createPackage = () => {
     // Run bolt on new package
     {
         child_process.execSync('yarn', {
-            cwd: resolve(__dirname, '..', '..'),
+            cwd: path.resolve(__dirname, '..', '..'),
         });
     }
 };
