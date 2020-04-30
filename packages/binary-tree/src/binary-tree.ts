@@ -5,7 +5,7 @@ export type BinaryTreeNode<TValue> = {
     left?: BinaryTreeNode<TValue>,
     score: number,
     value: TValue,
-}
+};
 
 /**
  * A function used when scoring items during insert in a binary tree.

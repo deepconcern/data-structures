@@ -1,1 +1,10 @@
-../../scripts/tooling/configs/tsconfig.package.json
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "extends": "../../tsconfig.json",
+    "references": [
+        { "path": "../stack" }
+    ]
+}

@@ -5,10 +5,12 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspaces run build",
-    "create-package": "node scripts/tooling/create-package.js",
+    "build": "tsc --build ./packages/*/tsconfig.json",
+    "clean": "./scripts/project/clean.sh",
+    "create-package": "node ./scripts/tooling/create-package.js",
     "generate-documentation": "typedoc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prebuild": "./scripts/project/prebuild.sh",
     "test": "jest"
   },
   "private": true,
