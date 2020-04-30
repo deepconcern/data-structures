@@ -1,8 +1,15 @@
-module.exports = {
+const { readdirSync } = require('fs');
+const { resolve } = require('path');
+
+const createProjectConfiguration = (projectName) => {
+  return {
+    displayName: projectName,
     preset: 'ts-jest',
     testEnvironment: 'node',
-    testMatch: [
-      '**/packages/*/src/**/?(*.)+(spec|test).[jt]s?(x)',
-    ],
-    verbose: false,
+    testMatch: [`<rootDir>/packages/${projectName}/src/**/*.test.ts`]
   };
+};
+
+module.exports = {
+  projects: readdirSync(resolve(__dirname, 'packages')).map(createProjectConfiguration),
+};

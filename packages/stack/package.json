@@ -7,11 +7,14 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "test": "jest"
+    "test": "../../scripts/package/test.sh"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
     "@types/jest": "^25.2.1",
+    "babel-jest": "^25.5.1",
     "jest": "^25.3.0",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8"

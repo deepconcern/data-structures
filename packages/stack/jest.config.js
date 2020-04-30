@@ -1,1 +1,0 @@
-../../scripts/tooling/configs/jest.package-config.js

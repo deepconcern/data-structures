@@ -5,13 +5,15 @@
   "author": "Wyatt Barnes",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --build ./packages/*/tsconfig.json",
+    "build": "./scripts/project/build.sh",
     "clean": "./scripts/project/clean.sh",
-    "create-package": "node ./scripts/tooling/create-package.js",
-    "generate-documentation": "typedoc",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "create-package": "./scripts/project/create-package.js",
+    "generate-documentation": "./scripts/project/generate-documentation.sh",
+    "lint": "./script/project/lint.sh",
     "prebuild": "./scripts/project/prebuild.sh",
-    "test": "jest"
+    "prewatch": "./scripts/project/prewatch.sh",
+    "test": "./scripts/project/test.sh",
+    "watch": "./scripts/project/watch.sh"
   },
   "private": true,
   "workspaces": [
